@@ -1,0 +1,28 @@
+Short Report on Mycotoxin Prediction Using Hyperspectral Imaging
+1. Preprocessing Steps and Rationale
+To ensure data quality and reliability, the preprocessing steps included:
+•	Handling Missing Data: Missing values were imputed using the median of each column.
+•	Normalization: Spectral data was standardized using StandardScaler to maintain consistency and improve model convergence.
+•	Anomaly Detection: Outliers were flagged by analyzing distributions and standard deviations.
+•	Data Splitting: The dataset was divided into an 80-20 training-testing split to evaluate model generalization.
+2. Dimensionality Reduction Insights #BYMUSTAFA
+Given the high-dimensional nature of hyperspectral data, techniques such as Principal Component Analysis (PCA) were considered to extract key features. However, feature selection based on SHAP values was ultimately used to retain only the most influential wavelengths, leading to improved interpretability and computational efficiency.
+3. Model Selection, Training, and Evaluation
+•	Baseline Model: A simple neural network was implemented as the primary regression model.
+•	Advanced Models: Additional experiments included ensemble methods such as Random Forest and Gradient Boosting.
+•	Training: The neural network was trained using ReLU activation and Adam optimizer, with mean squared error as the loss function.
+•	Evaluation Metrics: #byMUstafa
+o	Mean Absolute Error (MAE): Provided insight into average prediction errors.
+o	Root Mean Squared Error (RMSE): Highlighted deviations from actual mycotoxin levels.
+o	R² Score: Measured the proportion of variance explained by the model.
+4. Key Findings and Future Improvements
+•	Feature Importance: SHAP analysis revealed that specific wavelength bands were highly correlated with mycotoxin concentration.
+•	Prediction Performance: The neural network outperformed baseline regression models but showed limitations in cases with extreme mycotoxin levels.
+•	Deployment: The model was containerized using FastAPI and packaged for real-time prediction via an API.
+•	Future Work:
+o	Incorporate domain-specific spectral indices to enhance feature engineering.
+o	Experiment with attention-based deep learning architectures for improved prediction accuracy.
+o	Optimize hyperparameters using Bayesian search to refine model performance.
+This study demonstrates a robust approach to mycotoxin level prediction using hyperspectral imaging, paving the way for improved agricultural quality control.
+
+Made by - Mohd Mustafa Hussain
