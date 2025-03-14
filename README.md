@@ -38,19 +38,6 @@ Run the FastAPI application for serving predictions:
 
 uvicorn app:app --host 0.0.0.0 --port 8000
 
-Repository Structure
-
-<repository_name>/
-│── data/                 # Dataset and processed data files
-│── models/               # Trained model files
-│── src/                  # Source code
-│   │── preprocess.py     # Data preprocessing scripts
-│   │── train.py         # Model training and evaluation
-│   │── app.py           # API endpoint for deployment
-│── notebooks/           # Jupyter notebooks for exploratory analysis
-│── requirements.txt     # Dependencies
-│── README.md            # Documentation
-
 Additional Notes
 
 Ensure that the dataset is properly formatted before running the scripts.
